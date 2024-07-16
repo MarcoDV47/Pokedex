@@ -10,7 +10,7 @@ import ErrorPage from './components/ErrorPage/index.jsx';
 
 const router = createHashRouter([
   {
-    path: "/",
+    path: "",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
