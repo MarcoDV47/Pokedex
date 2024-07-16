@@ -188,7 +188,7 @@ const Header = styled.header`
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center; {/*talvez tirar*/ }
+            align-items: center;
             gap: 15px;
             top: 55px;
             padding: 1em;

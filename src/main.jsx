@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom';
 import React from 'react'
 import ReactDOM from 'react-dom/client'
@@ -8,7 +8,7 @@ import PokemonPage from './components/PokemonPage/index.jsx';
 import { ThemeProvider } from './context/theme-context.jsx';
 import ErrorPage from './components/ErrorPage/index.jsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
