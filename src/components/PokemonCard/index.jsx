@@ -8,6 +8,7 @@ import fetchPokemonTypes from "../../services/fetchPokemonTypes";
 import fetch10Pokemons from "../../services/fetch10Pokemons";
 import capitalizeFirstLetter from "../../scripts/capitalizeFirstLetter";
 import scrollTop from "../../scripts/scrollTop";
+import { pokemonOBJ } from "../../utils/teste";
 
 export default function PokemonCard() {
 
@@ -61,6 +62,7 @@ export default function PokemonCard() {
                             {e.types.map((e, i) =>
                                 <Link key={i} to={`/type/${e.type.name}`}>
                                     <img title={e.type.name} alt={e.type.name} src={`../src/assets/images/${e.type.name}-icon.png`} />
+                                    <img title={"masque coisa"} alt={"as que coisa"} src={pokemonOBJ.poison} />
                                 </Link>
                             )}
                         </div>

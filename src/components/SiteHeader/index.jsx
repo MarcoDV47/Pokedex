@@ -3,8 +3,6 @@ import { Link, useNavigate } from "react-router-dom"
 import { ThemeContext } from "../../context/theme-context";
 import styled from "styled-components"
 import scrollTop from "../../scripts/scrollTop";
-import logo from "../../assets/images/background-day.png"
-import {teste} from "../../utils/teste"
 
 export default function SiteHeader() {
 
@@ -70,7 +68,6 @@ export default function SiteHeader() {
                         <option value="steel">Steel⚙️</option>
                         <option value="water">Water💧</option>
                     </select>}
-                    <img src={teste.poison}/>
                 <button className="iconBtn" type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <button onClick={() => toggleHamburguer()} id="hamburguer-menu" type="button"></button>

@@ -1,3 +1,3 @@
 export const pokemonOBJ = {
-    poison: "../../assets/images/background-day.png"
+    poison: "src/assets/images/poison-icon.png"
 }
