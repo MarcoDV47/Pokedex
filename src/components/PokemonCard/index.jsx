@@ -9,7 +9,6 @@ import fetch10Pokemons from "../../services/fetch10Pokemons";
 import capitalizeFirstLetter from "../../scripts/capitalizeFirstLetter";
 import scrollTop from "../../scripts/scrollTop";
 import { pokemonObj } from "../../utils/teste";
-import fire from "../../assets/images/fire-icon.png"
 
 export default function PokemonCard() {
 
@@ -64,7 +63,7 @@ export default function PokemonCard() {
                                 <Link key={i} to={`/type/${e.type.name}`}>
                                     <img title={e.type.name} alt={e.type.name} src={`../src/assets/images/${e.type.name}-icon.png`} />
                                     <img title={"masque coisa"} alt={"as que coisa"} src={pokemonObj.fire} />
-                                    <img title={"masque coisa"} alt={"as que coisa"} src={pokemonObj.poison} />
+                                    <img src={pokemonObj.poison} />
                                 </Link>
                             )}
                         </div>
