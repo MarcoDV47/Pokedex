@@ -1,5 +1,7 @@
-import poison from "../assets/images/poison-icon.png"
+import water from "../assets/images/water-icon";
 
 export const pokemonObj = {
     poison: "src/assets/images/poison-icon.png",
+    fire: "src/assets/images/fire-icon.png",
+    water: water
 }
