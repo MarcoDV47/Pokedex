@@ -8,7 +8,7 @@ import fetchPokemonTypes from "../../services/fetchPokemonTypes";
 import fetch10Pokemons from "../../services/fetch10Pokemons";
 import capitalizeFirstLetter from "../../scripts/capitalizeFirstLetter";
 import scrollTop from "../../scripts/scrollTop";
-import {pokemonObj} from "../../utils/teste";
+import { pokemonObj } from "../../utils/teste";
 import fire from "../../assets/images/fire-icon.png"
 
 export default function PokemonCard() {
