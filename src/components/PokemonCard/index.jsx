@@ -64,7 +64,6 @@ export default function PokemonCard() {
                                     <img title={e.type.name} alt={e.type.name} src={`../src/assets/images/${e.type.name}-icon.png`} />
                                     <img src={pokemonObj.poison} />
                                     <img src={pokemonObj.water} />
-                                    <img title={"masque coisa"} alt={"as que coisa"} src={pokemonObj.fire} />
                                     <img src={pokemonObj.grass} />
                                 </Link>
                             )}
