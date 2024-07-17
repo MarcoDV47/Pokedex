@@ -1,3 +1,5 @@
-export const pokemonOBJ = {
-    poison: "../assets/images/poison-icon.png"
+import poison from "../assets/images/poison-icon.png"
+
+export const pokemonObj = {
+    poison: poison,
 }
