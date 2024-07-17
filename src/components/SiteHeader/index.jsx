@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { ThemeContext } from "../../context/theme-context";
 import styled from "styled-components"
 import scrollTop from "../../scripts/scrollTop";
+import logo from "../../assets/images/logo.png"
 
 export default function SiteHeader() {
 
@@ -37,7 +38,7 @@ export default function SiteHeader() {
     return (
         <Header className={theme}>
             <Link role="link" onClick={scrollTop} to="/">
-                <Logo className="logo" src="../src/assets/images/logo.png" />
+                <Logo className="logo" src={logo} />
             </Link>
             <form onSubmit={handleSubmit}>
                 <button className="iconBtn" id="theme" type="button" onClick={toggleTheme}>{
