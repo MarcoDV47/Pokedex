@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { ThemeContext } from "../../context/theme-context";
 import styled from "styled-components"
 import scrollTop from "../../scripts/scrollTop";
-import logo from "../assets/images/logo.png"
+import logo from "../../assets/images/logo.png"
 
 export default function SiteHeader() {
 
