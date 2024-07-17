@@ -1,4 +1,4 @@
-import water from "../assets/images/water-icon";
+import water from "src/assets/images/water-icon";
 
 export const pokemonObj = {
     fire: "src/assets/images/fire-icon.png",
