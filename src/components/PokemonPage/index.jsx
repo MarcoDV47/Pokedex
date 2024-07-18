@@ -5,6 +5,7 @@ import { ThemeContext } from "../../context/theme-context";
 import styled from "styled-components";
 import fetchMorePokemonInfo from "../../services/fetchMorePokemonInfo";
 import capitalizeFirstLetter from "../../scripts/capitalizeFirstLetter";
+import { pokemonObj } from "../../utils/teste";
 
 export default function PokemonPage() {
 
@@ -88,21 +89,21 @@ export default function PokemonPage() {
                                 <h2>Types</h2>
                                 {pokemon.types.map((e, i) =>
                                     <Link key={i} to={`/type/${e.type.name}`}>
-                                        <Icon title={e.type.name} key={i} src={`../src/assets/images/${e.type.name}-icon.png`} />
+                                        <Icon title={e.type.name} key={i} src={pokemonObj[e.type.name]} />
                                     </Link>)}
                             </div>
                             <div>
                                 <h2>Strong against</h2>
                                 {types.strongAgainst.map((e, i) =>
                                     <Link key={i} to={`/type/${e}`}>
-                                        <Icon title={e} src={`../src/assets/images/${e}-icon.png`} />
+                                        <Icon title={e} src={pokemonObj[e.type.name]} />
                                     </Link>)}
                             </div>
                             <div>
                                 <h2>Weak against</h2>
                                 {types.weakAgainst.map((e, i) =>
                                     <Link key={i} to={`/type/${e}`}>
-                                        <Icon title={e} src={`../src/assets/images/${e}-icon.png`} />
+                                        <Icon title={e} src={pokemonObj[e.type.name]} />
                                     </Link>)}
                             </div>
                         </div>
