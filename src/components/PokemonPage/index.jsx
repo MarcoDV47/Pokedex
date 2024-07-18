@@ -96,14 +96,14 @@ export default function PokemonPage() {
                                 <h2>Strong against</h2>
                                 {types.strongAgainst.map((e, i) =>
                                     <Link key={i} to={`/type/${e}`}>
-                                        <Icon title={e} src={pokemonObj && pokemonObj[e.type.name]} />
+                                        <Icon title={e} src={pokemonObj && pokemonObj[e]} />
                                     </Link>)}
                             </div>
                             <div>
                                 <h2>Weak against</h2>
                                 {types.weakAgainst.map((e, i) =>
                                     <Link key={i} to={`/type/${e}`}>
-                                        <Icon title={e} src={pokemonObj && pokemonObj[e.type.name]} />
+                                        <Icon title={e} src={pokemonObj && pokemonObj[e]} />
                                     </Link>)}
                             </div>
                         </div>
