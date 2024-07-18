@@ -15,6 +15,7 @@ import psychic from "../assets/images/psychic-icon.png";
 import rock from "../assets/images/rock-icon.png";
 import steel from "../assets/images/steel-icon.png";
 import water from "../assets/images/water-icon.png";
+import flying from "../assets/images/flying-icon.png";
 
 export const pokemonObj = {
     fire: fire,
@@ -34,5 +35,5 @@ export const pokemonObj = {
     rock: rock,
     steel: steel,
     water: water,
-
+    flying: flying
 }

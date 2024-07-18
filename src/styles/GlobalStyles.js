@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import bgDay from "../assets/images/background-day.png"
+import bgNight from "../assets/images/background-night.png"
 
 const GlobalStyles = createGlobalStyle`
 
@@ -31,7 +33,7 @@ const GlobalStyles = createGlobalStyle`
         flex-wrap: wrap;
         gap: 1em;
         padding: 1em;
-        background: url("../src/assets/images/background-day.png") no-repeat fixed;
+        background: url(${bgDay}) no-repeat fixed;
         background-size: cover;
         transition: 2s ease;
         color: #fff;
@@ -43,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     main.site-content.dark {
-        background: url("../src/assets/images/background-night.png") no-repeat fixed;
+        background: url(${bgNight}) no-repeat fixed;
         background-size: cover;
         color: #FEFBC9;
     }
