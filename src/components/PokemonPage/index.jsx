@@ -191,6 +191,7 @@ const Section = styled.section`
     section.stats li {
         border-bottom: 1px solid black;
         margin-bottom: .2em;
+        transition: 2s ease;
     }
 
     section li {
