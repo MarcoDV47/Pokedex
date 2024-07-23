@@ -33,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
         flex-wrap: wrap;
         gap: 1em;
         padding: 1em;
+        background: url(${bgNight});
         background: url(${bgDay}) no-repeat fixed;
         background-size: cover;
         transition: 2s ease;

@@ -173,7 +173,7 @@ const Header = styled.header`
         transition: .5s ease;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 600px) {
         &{
             padding: .1em 1em;
             margin-top: -55px;

@@ -5,7 +5,7 @@ import { ThemeContext } from "../../context/theme-context";
 import styled from "styled-components";
 import fetchMorePokemonInfo from "../../services/fetchMorePokemonInfo";
 import capitalizeFirstLetter from "../../scripts/capitalizeFirstLetter";
-import { pokemonObj } from "../../utils/teste";
+import { pokemonObj } from "../../utils/pokemonObj";
 
 export default function PokemonPage() {
 
