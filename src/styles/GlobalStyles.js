@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
         gap: 1em;
         padding: 1em;
         background: url(${bgDay}) no-repeat fixed;
-        background-color: #105A94;
+        background-color: #31CDFE;
         background-size: cover;
         transition: 2s ease;
         color: #fff;
