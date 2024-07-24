@@ -33,13 +33,16 @@ const GlobalStyles = createGlobalStyle`
         flex-wrap: wrap;
         gap: 1em;
         padding: 1em;
-        background-image: 
+        background: url(${bgDay}) no-repeat fixed;
+        background-size: cover;
+        ${'' /* background-image: 
             url(${bgDay}),
             url(${bgNight});
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-attachment: fixed; */}
         transition: 2s ease;
+        transition: background 2s;
         color: #fff;
     }
 
@@ -49,7 +52,9 @@ const GlobalStyles = createGlobalStyle`
     }
 
     main.site-content.dark {
-        background-size: 0 0, cover;
+        background-image: url(${bgNight});
+        ${'' /* background-size: 0 0, cover; */}
+        transition: background 2s;
         color: #FEFBC9;
     }
 
