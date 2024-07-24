@@ -23,6 +23,9 @@ const GlobalStyles = createGlobalStyle`
     /* Global */
 
     main.site-content {
+        background: url(${bgNight}) no-repeat fixed;
+    }
+    main.site-content {
         font-family: "Roboto Condensed";
         display: flex;
         min-height: 100vh;
