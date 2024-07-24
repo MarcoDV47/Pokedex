@@ -23,9 +23,6 @@ const GlobalStyles = createGlobalStyle`
     /* Global */
 
     main.site-content {
-        background: url(${bgNight}) no-repeat fixed;
-    }
-    main.site-content {
         font-family: "Roboto Condensed";
         display: flex;
         min-height: 100vh;
@@ -36,8 +33,12 @@ const GlobalStyles = createGlobalStyle`
         flex-wrap: wrap;
         gap: 1em;
         padding: 1em;
-        background: url(${bgDay}) no-repeat fixed;
+        background-image: 
+            url(${bgDay}),
+            url(${bgNight});
         background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         transition: 2s ease;
         color: #fff;
     }
@@ -48,8 +49,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     main.site-content.dark {
-        background: url(${bgNight}) no-repeat fixed;
-        background-size: cover;
+        background-size: 0 0, cover;
         color: #FEFBC9;
     }
 
