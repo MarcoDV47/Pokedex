@@ -33,8 +33,8 @@ const GlobalStyles = createGlobalStyle`
         flex-wrap: wrap;
         gap: 1em;
         padding: 1em;
-        background-color: #105A94;
         background: url(${bgDay}) no-repeat fixed;
+        background-color: #105A94;
         background-size: cover;
         transition: 2s ease;
         color: #fff;
