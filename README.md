@@ -1,8 +1,22 @@
-# React + Vite
+# Pokedex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Breve descrição do propósito da aplicação;
+Esta aplicação tem como propósito listar todos os pokemons disponíveis
 
-Currently, two official plugins are available:
+## Breve descrição das funcionalidades da aplicação entregue;
+Possui vários cards de pokemons
+Possui um input para pesquisar um pokemon específico ou um select para selecionar por tipo.
+Possui um botão para alterar o tema
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Ferramentas utilizadas, e o por que estas foram escolhidas para a realização do desafio;
+React
+
+## Decisões adotadas durante o planejamento e execução do desafio, justificando-as;
+Transição demorada
+
+## Passo a passo dos comandos para que possamos rodar o seu projeto no nosso computador.
+git clone https://github.com/MarcoDV47/Pokedex.git
+cd Pokedex
+npm i
+npm run dev
+
