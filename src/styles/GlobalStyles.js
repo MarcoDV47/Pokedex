@@ -33,16 +33,10 @@ const GlobalStyles = createGlobalStyle`
         flex-wrap: wrap;
         gap: 1em;
         padding: 1em;
-        background: url(${bgDay}) no-repeat fixed;
+        background-color: #105A94;
+        background-image: url(${bgDay});
         background-size: cover;
-        ${'' /* background-image: 
-            url(${bgDay}),
-            url(${bgNight});
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed; */}
         transition: 2s ease;
-        transition: background 2s;
         color: #fff;
     }
 
@@ -53,8 +47,6 @@ const GlobalStyles = createGlobalStyle`
 
     main.site-content.dark {
         background-image: url(${bgNight});
-        ${'' /* background-size: 0 0, cover; */}
-        transition: background 2s;
         color: #FEFBC9;
     }
 
