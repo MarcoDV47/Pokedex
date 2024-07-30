@@ -36,7 +36,7 @@ export default function PokemonCard() {
         const response = await fetch10Pokemons(timesFetched);
         const newPokemons = await Promise.all(response.map(async pokemon => {
             const { name, sprites, types, id } = await fetchMorePokemonInfo(pokemon.url);
-            const { front_default: image } = sprites;
+            const { front_default: image } = await sprites;
             return { name, image, types, id }
         }))
         setPokemon((prevState =>
@@ -186,6 +186,7 @@ main img:hover {
 div {
     padding-top: .2em;
     background-color: #fff;
+    transition: 2s ease;
 }
 
 &.dark header {
