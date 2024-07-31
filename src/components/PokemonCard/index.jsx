@@ -55,7 +55,7 @@ export default function PokemonCard() {
                                 <h1>{capitalizeFirstLetter(e.name)}</h1>
                             </header>
                             <main className={e.types[0].type.name}>
-                                <img src={e.image} />
+                                <img src={e.image ? e.image : ""} />
                             </main>
                         </Link>
                         <div className="types">
