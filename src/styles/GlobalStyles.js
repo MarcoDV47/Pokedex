@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
     .poke-name {
         text-transform: capitalize;
     }
-    
+
     main.site-content {
         font-family: "Roboto Condensed";
         display: flex;
