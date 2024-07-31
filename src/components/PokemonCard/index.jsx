@@ -54,7 +54,7 @@ export default function PokemonCard() {
                     <Section className={theme} onClick={scrollTop} key={i}>
                         <Link to={`/pokemon/${e.id}`}>
                             <header>
-                                <h1>{capitalizeFirstLetter(e.name)}</h1>
+                                <h1 className="poke-name">{e?.name}</h1>
                             </header>
                             <main className={e.types[0].type.name}>
                                 <img src={e?.image} />
