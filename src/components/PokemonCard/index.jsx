@@ -23,9 +23,7 @@ export default function PokemonCard() {
                 await fetch10Pokemons();
             const newPokemons = await Promise.all(response.map(async pokemon => {
                 const { name, sprites, types, id } = await fetchMorePokemonInfo(pokemon.url);
-                console.log(sprites?.front_default);
                 const image = sprites?.front_default;
-                console.log(image, "image");
                 return { name, image, types, id }
             }))
             setPokemon(newPokemons)
@@ -56,7 +54,7 @@ export default function PokemonCard() {
                             <header>
                                 <h1 className="poke-name">{e?.name}</h1>
                             </header>
-                            <main className={e?.types[0].type.name}>
+                            <main className={e?.types?.[0].type.name}>
                                 <img src={e?.image} />
                             </main>
                         </Link>
