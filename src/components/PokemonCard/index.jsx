@@ -23,7 +23,9 @@ export default function PokemonCard() {
                 await fetch10Pokemons();
             const newPokemons = await Promise.all(response.map(async pokemon => {
                 const { name, sprites, types, id } = await fetchMorePokemonInfo(pokemon.url);
-                const { front_default: image } = sprites;
+                console.log(sprites?.front_default);
+                const image = sprites?.front_default;
+                console.log(image, "image");
                 return { name, image, types, id }
             }))
             setPokemon(newPokemons)
@@ -36,7 +38,7 @@ export default function PokemonCard() {
         const response = await fetch10Pokemons(timesFetched);
         const newPokemons = await Promise.all(response.map(async pokemon => {
             const { name, sprites, types, id } = await fetchMorePokemonInfo(pokemon.url);
-            const { front_default: image } = sprites ? sprites : "";
+            const { front_default: image } = sprites;
             return { name, image, types, id }
         }))
         setPokemon((prevState =>
