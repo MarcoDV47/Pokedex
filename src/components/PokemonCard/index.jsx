@@ -61,7 +61,7 @@ export default function PokemonCard() {
                             </main>
                         </Link>
                         <div className="types">
-                            {e.types.map((e, i) =>
+                            {e?.types.map((e, i) =>
                                 <Link key={i} to={`/type/${e?.type.name}`}>
                                     <img title={e?.type.name} alt={e?.type.name} src={pokemonObj[e?.type.name]} />
                                 </Link>
