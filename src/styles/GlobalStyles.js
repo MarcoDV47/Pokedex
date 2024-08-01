@@ -22,8 +22,9 @@ const GlobalStyles = createGlobalStyle`
 
     /* Global */
 
-    .poke-name {
-        text-transform: capit
+    .poke-name,
+    .poke-desc {
+        text-transform: capitalize;
     }
 
     main.site-content {

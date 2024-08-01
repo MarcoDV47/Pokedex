@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../../context/theme-context";
 import styled from "styled-components";
 import fetchMorePokemonInfo from "../../services/fetchMorePokemonInfo";
-import { pokemonTypes} from "../../utils/pokemonTypes";
+import { pokemonTypes } from "../../utils/pokemonTypes";
 
 export default function PokemonPage() {
 
@@ -111,7 +111,7 @@ export default function PokemonPage() {
                             <section className="stats">
                                 <h2>Stats</h2>
                                 <ul>
-                                    {pokemon.stats.map((e, i) => <li key={i}>{capitalizeFirstLetter(e.stat.name)} <strong>{e.base_stat}</strong></li>)}
+                                    {pokemon.stats.map((e, i) => <li className="poke-desc" key={i}>{e.stat.name} <strong>{e.base_stat}</strong></li>)}
                                 </ul>
                             </section>
                             <section>
@@ -119,7 +119,7 @@ export default function PokemonPage() {
                                 <ul>
                                     {pokemon.abilities.map((e, i) =>
                                         <li key={i}>
-                                            <strong>{capitalizeFirstLetter(e.ability.name)}</strong>
+                                            <strong className="poke-desc">{e.ability.name}</strong>
                                             <p>{abilities && abilities[i] ? abilities[i] : "❌ Description not found"}</p>
                                         </li>
                                     )}
@@ -130,7 +130,7 @@ export default function PokemonPage() {
                                 <ul>
                                     {pokemon.moves[0]
                                         ? pokemon.moves.map((e, i) =>
-                                            <li key={i}><strong>{capitalizeFirstLetter(e.move.name)}</strong>
+                                            <li key={i}><strong className="poke-desc">{e.move.name}</strong>
                                                 <p>{moves && moves[i] ? moves[i] : "❌ Description not found"}</p></li>
                                         ) : <p>❌ <strong>No moves found</strong></p>}
                                 </ul>
