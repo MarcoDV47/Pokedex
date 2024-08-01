@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/PokemonCard/index.jsx</title>
+    <title>Code coverage report for components/PokemonCards/index.jsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../prettify.css" />
-    <link rel="stylesheet" href="../../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/PokemonCard</a> index.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/PokemonCards</a> index.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">47.05% </span>
+                <span class="strong">46.26% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>32/68</span>
+                <span class='fraction'>31/67</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">47.05% </span>
+                <span class="strong">46.26% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>32/68</span>
+                <span class='fraction'>31/67</span>
             </div>
         
             
@@ -300,7 +300,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -366,6 +365,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -525,11 +525,10 @@ import styled from "styled-components";
 import fetchMorePokemonInfo from "../../services/fetchMorePokemonInfo";
 import fetchPokemonTypes from "../../services/fetchPokemonTypes";
 import fetch10Pokemons from "../../services/fetch10Pokemons";
-import capitalizeFirstLetter from "../../scripts/capitalizeFirstLetter";
 import scrollTop from "../../scripts/scrollTop";
-import { pokemonObj } from "../../utils/pokemonObj";
+import { pokemonTypes } from "../../utils/pokemonTypes";
 &nbsp;
-export default function PokemonCard() {
+export default function PokemonCards() {
 &nbsp;
     const [pokemon, setPokemon] = useState();
     const [timesFetched, setTimesFetched] = useState(1);
@@ -542,7 +541,7 @@ export default function PokemonCard() {
                 await fetch10Pokemons(<span class="branch-0 cbranch-no" title="branch not covered" >);</span>
 <span class="cstat-no" title="statement not covered" >            const newPokemons = await Promise.all(response.map(async pokemon =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                const { name, sprites, types, id } = await fetchMorePokemonInfo(pokemon.url);</span>
-<span class="cstat-no" title="statement not covered" >                const { front_default: image } = sprites;</span>
+<span class="cstat-no" title="statement not covered" >                const image = sprites?.front_default;</span>
 <span class="cstat-no" title="statement not covered" >                return { name, image, types, id }</span>
 <span class="cstat-no" title="statement not covered" >            }))</span>
 <span class="cstat-no" title="statement not covered" >            setPokemon(newPokemons)</span>
@@ -571,16 +570,16 @@ export default function PokemonCard() {
 <span class="cstat-no" title="statement not covered" >                    &lt;Section className={theme} onClick={scrollTop} key={i}&gt;</span>
 <span class="cstat-no" title="statement not covered" >                        &lt;Link to={`/pokemon/${e.id}`}&gt;</span>
 <span class="cstat-no" title="statement not covered" >                            &lt;header&gt;</span>
-<span class="cstat-no" title="statement not covered" >                                &lt;h1&gt;{capitalizeFirstLetter(e.name)}&lt;/h1&gt;</span>
+<span class="cstat-no" title="statement not covered" >                                &lt;h1 className="poke-name"&gt;{e?.name}&lt;/h1&gt;</span>
 <span class="cstat-no" title="statement not covered" >                            &lt;/header&gt;</span>
-<span class="cstat-no" title="statement not covered" >                            &lt;main className={e.types[0].type.name}&gt;</span>
-<span class="cstat-no" title="statement not covered" >                                &lt;img src={e.image} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;main className={e?.types?.[0].type.name}&gt;</span>
+<span class="cstat-no" title="statement not covered" >                                &lt;img src={e?.image} /&gt;</span>
 <span class="cstat-no" title="statement not covered" >                            &lt;/main&gt;</span>
 <span class="cstat-no" title="statement not covered" >                        &lt;/Link&gt;</span>
 <span class="cstat-no" title="statement not covered" >                        &lt;div className="types"&gt;</span>
-<span class="cstat-no" title="statement not covered" >                            {e.types.map((e, i) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >                                &lt;Link key={i} to={`/type/${e.type.name}`}&gt;</span>
-<span class="cstat-no" title="statement not covered" >                                    &lt;img title={e.type.name} alt={e.type.name} src={pokemonObj[e.type.name]} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            {e?.types?.map((e, i) =&gt;</span>
+<span class="cstat-no" title="statement not covered" >                                &lt;Link key={i} to={`/type/${e?.type.name}`}&gt;</span>
+<span class="cstat-no" title="statement not covered" >                                    &lt;img title={e?.type.name} alt={e?.type.name} src={pokemonTypes[e?.type.name]} /&gt;</span>
 <span class="cstat-no" title="statement not covered" >                                &lt;/Link&gt;</span>
 <span class="cstat-no" title="statement not covered" >                            )}</span>
 <span class="cstat-no" title="statement not covered" >                        &lt;/div&gt;</span>
@@ -705,6 +704,7 @@ main img:hover {
 div {
     padding-top: .2em;
     background-color: #fff;
+    transition: 2s ease;
 }
 &nbsp;
 &amp;.dark header {
@@ -751,16 +751,16 @@ const Button = styled.button`
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-07-25T16:06:45.417Z
+                at 2024-07-31T15:11:10.203Z
             </div>
-        <script src="../../../prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../../sorter.js"></script>
-        <script src="../../../block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     

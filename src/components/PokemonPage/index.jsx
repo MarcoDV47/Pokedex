@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../../context/theme-context";
 import styled from "styled-components";
 import fetchMorePokemonInfo from "../../services/fetchMorePokemonInfo";
-import capitalizeFirstLetter from "../../scripts/capitalizeFirstLetter";
-import { pokemonObj } from "../../utils/pokemonObj";
+import { pokemonTypes} from "../../utils/pokemonTypes";
 
 export default function PokemonPage() {
 
@@ -78,7 +77,7 @@ export default function PokemonPage() {
             {pokemon &&
                 <Section className={theme}>
                     <header>
-                        <h1>{pokemon && capitalizeFirstLetter(pokemon.name)} #{pokemon.id}</h1>
+                        <h1 className="poke-name">{pokemon?.name} #{pokemon?.id}</h1>
                     </header>
                     <div className="container">
                         <div className={`pokemonAvatar ${pokemon.types[0].type.name}`}>
@@ -89,21 +88,21 @@ export default function PokemonPage() {
                                 <h2>Types</h2>
                                 {pokemon.types.map((e, i) =>
                                     <Link key={i} to={`/type/${e.type.name}`}>
-                                        <Icon title={e.type.name} key={i} src={pokemonObj[e.type.name]} />
+                                        <Icon title={e.type.name} key={i} src={pokemonTypes[e.type.name]} />
                                     </Link>)}
                             </div>
                             <div>
                                 <h2>Strong against</h2>
                                 {types.strongAgainst.map((e, i) =>
                                     <Link key={i} to={`/type/${e}`}>
-                                        <Icon title={e} src={pokemonObj[e]} />
+                                        <Icon title={e} src={pokemonTypes[e]} />
                                     </Link>)}
                             </div>
                             <div>
                                 <h2>Weak against</h2>
                                 {types.weakAgainst.map((e, i) =>
                                     <Link key={i} to={`/type/${e}`}>
-                                        <Icon title={e} src={pokemonObj[e]} />
+                                        <Icon title={e} src={pokemonTypes[e]} />
                                     </Link>)}
                             </div>
                         </div>

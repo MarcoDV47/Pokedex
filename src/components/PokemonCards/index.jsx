@@ -6,11 +6,10 @@ import styled from "styled-components";
 import fetchMorePokemonInfo from "../../services/fetchMorePokemonInfo";
 import fetchPokemonTypes from "../../services/fetchPokemonTypes";
 import fetch10Pokemons from "../../services/fetch10Pokemons";
-import capitalizeFirstLetter from "../../scripts/capitalizeFirstLetter";
 import scrollTop from "../../scripts/scrollTop";
-import { pokemonObj } from "../../utils/pokemonObj";
+import { pokemonTypes } from "../../utils/pokemonTypes";
 
-export default function PokemonCard() {
+export default function PokemonCards() {
 
     const [pokemon, setPokemon] = useState();
     const [timesFetched, setTimesFetched] = useState(1);
@@ -61,7 +60,7 @@ export default function PokemonCard() {
                         <div className="types">
                             {e?.types?.map((e, i) =>
                                 <Link key={i} to={`/type/${e?.type.name}`}>
-                                    <img title={e?.type.name} alt={e?.type.name} src={pokemonObj[e?.type.name]} />
+                                    <img title={e?.type.name} alt={e?.type.name} src={pokemonTypes[e?.type.name]} />
                                 </Link>
                             )}
                         </div>

@@ -17,7 +17,7 @@ import steel from "../assets/images/steel-icon.png";
 import water from "../assets/images/water-icon.png";
 import flying from "../assets/images/flying-icon.png";
 
-export const pokemonObj = {
+export const pokemonTypes = {
     fire: fire,
     poison: poison,
     grass: grass,

@@ -1,16 +1,16 @@
-import PokemonCard from "../PokemonCard/index"
+import PokemonCards from "../PokemonCards/index"
 import { render, screen } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
 import { ThemeProvider } from "../../context/theme-context"
 import '@testing-library/jest-dom';
 
-describe("PokemonCard", () => {
+describe("PokemonCards", () => {
 
     const renderElement = () => {
         render(
             <ThemeProvider>
                 <BrowserRouter>
-                    <PokemonCard />
+                    <PokemonCards />
                 </BrowserRouter>
             </ThemeProvider>
         )
